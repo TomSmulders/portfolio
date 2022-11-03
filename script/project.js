@@ -28,6 +28,7 @@ window.onload = function() {
             var tags = "";
             var textProject = data.text;
             var imgProject = data.img_project;
+            var githubLink = data.github;
 
             if (tags_list) {
                 tags_list.forEach(tag => {
@@ -43,6 +44,11 @@ window.onload = function() {
            //document.getElementById("imgProject1").style.backgroundImage = 'url("' + imgProject + '");';
 
            document.getElementById("imgProject1").innerHTML = `<img src="${imgProject} " alt="image project" srcset="" width="70%">`
+        if (githubLink) {
+            document.getElementById("github").innerHTML = `<li><a href="${githubLink}" class="fa fa-lg fa-github"></a></li>`
+        }   
+           
+
     })
 
 }
