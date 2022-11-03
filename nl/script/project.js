@@ -42,7 +42,7 @@ window.onload = function() {
            
            //document.getElementById("imgProject1").style.backgroundImage = 'url("' + imgProject + '");';
 
-           document.getElementById("imgProject1").innerHTML = `<ul><li><img src="${imgProject} " alt="image project" srcset="" width="70%"></li></ul>`
+           document.getElementById("imgProject1").innerHTML = `<img src="${imgProject} " alt="image project" srcset="" width="70%">`
     })
 
 }
