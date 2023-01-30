@@ -45,7 +45,13 @@ window.onload = function() {
 
            document.getElementById("imgProject1").innerHTML = `<img src="${imgProject} " alt="image project" srcset="" width="70%">`
         if (githubLink) {
-            document.getElementById("github").innerHTML = `<ul><li><a href="${githubLink}" class="fa fa-lg fa-github"></a></li></ul>`
+            document.getElementById("github").innerHTML = `
+            <div align="center" class="socialbtns">
+                <ul>
+                    <li><a href="${githubLink}" class="fa fa-lg fa-github"></a></li>
+                </ul>
+            </div>
+            `;
         }   
            
 
