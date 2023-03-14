@@ -53,7 +53,15 @@ window.onload = function() {
             </div>
             `;
         }   
-           
+        if (title == "Spaceship Acooro 69") {
+            document.getElementById("github").innerHTML = `
+            <div align="center" class="socialbtns">
+                <ul>
+                <iframe frameborder="0" src="https://itch.io/embed/1959140" width="552" height="167"><a href="https://yaboiijesse.itch.io/spaceship-acorro69">Spaceship Acorro by Tom Smulders</a></iframe>
+                </ul>
+            </div>
+            `;
+        }
 
     })
 
