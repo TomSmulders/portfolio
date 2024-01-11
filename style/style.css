@@ -42,6 +42,16 @@ body{
     width: 50%;
   }
 
+.project-Page-image-size{
+  width: 1500px;
+}
+
+.project-Page-image{
+  overflow: hidden;
+  width: 100%;
+  
+}
+
   div.sticky {
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -180,4 +190,8 @@ body{
   .hidden-mobile {
     display: none;
   }
+}
+
+.work-item-desc-container{
+  text-align: left !important;
 }

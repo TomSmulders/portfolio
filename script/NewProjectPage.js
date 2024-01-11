@@ -13,7 +13,7 @@ window.onload = function() {
         appId: "1:184750941452:web:da4e63c041b3e57c009529",
         measurementId: "G-NGFJCJ52BZ"
     };
-    
+
     // Initialize Firebase & Firestore
     firebase.initializeApp(firebaseConfig);
     var db = firebase.firestore();
@@ -29,6 +29,8 @@ window.onload = function() {
             var textProject = data.text;
             var imgProject = data.img_project;
             var githubLink = data.github;
+            var itch_io_code;
+            var itch_io_link;
 
             if (tags_list) {
                 tags_list.forEach(tag => {
@@ -39,7 +41,7 @@ window.onload = function() {
 
            document.getElementById("tags").innerHTML = tags;
            
-           document.getElementById("textProject").innerHTML = textProject;
+           document.getElementById("text`Project`").innerHTML = textProject;
            
            //document.getElementById("imgProject1").style.backgroundImage = 'url("' + imgProject + '");';
 
@@ -52,7 +54,7 @@ window.onload = function() {
                 </ul>
             </div>
             `;
-        }   
+        }
         if (title == "Spaceship Acooro 69") {
             document.getElementById("itch_io").innerHTML = `
             <div align="center" class="socialbtns">
