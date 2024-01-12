@@ -86,7 +86,7 @@ body{
     -webkit-border-radius: 22px;
     -o-border-radius: 22px;
   }
-  
+
   .socialbtns .fa:hover {
     color: #ffffff;
     background-color: #000;
@@ -194,4 +194,15 @@ body{
 
 .work-item-desc-container{
   text-align: left !important;
+}
+
+.text-center .row{
+  justify-content: space-around !important;
+}
+
+.project-center-video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
