@@ -48,8 +48,11 @@ body{
 
 .project-Page-image{
   overflow: hidden;
-  width: 100%;
-  
+  height: 200px;
+}
+
+.project-Page-image img{
+  height: 200px;
 }
 
   div.sticky {
@@ -190,6 +193,15 @@ body{
   .hidden-mobile {
     display: none;
   }
+
+  .mobile-margin{
+    margin-top: 3rem !important;
+  }
+
+  .project-video{
+    width: 100% !important;
+    height: 224px !important;
+  } 
 }
 
 .work-item-desc-container{
@@ -205,4 +217,14 @@ body{
   margin-left: auto;
   margin-right: auto;
   width: 70%;
+}
+
+.project-video{
+  width: 1120px;
+  height: 630px;
+}
+
+.project-img-size{
+  height: 266px;
+  overflow: hidden;
 }
