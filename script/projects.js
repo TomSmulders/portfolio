@@ -21,24 +21,44 @@ window.onload = function() {
             var title = data.title;
             var img_url = data.img_url;
             var link = doc.id;
-
-            projectList.innerHTML += `
-            <div class="col-sm-6 col-md-6 col-lg-4">
-                    <div class="work-item-container">
-                        <a href="project.html?p=${link}">
-                        <div class="work-item ">
-                            <div class="work-item-bg" style="background-image: url('${img_url}')"></div>
-                            
-                            <div class="work-item-title-container">
-                            <div class="work-item-title">
-                                <span>${title}</span>
+            var layout = data.img_2_layout;
+            if (layout) {
+                
+                projectList.innerHTML += `
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="work-item-container">
+                            <a href="NewProjectPage.html?p=${link}">
+                            <div class="work-item ">
+                                <div class="work-item-bg" style="background-image: url('${img_url}')"></div>
+                                <div class="work-item-title-container">
+                                <div class="work-item-title">
+                                    <span>${title}</span>
+                                </div>
+                                </div>
                             </div>
-                            </div>
+                            </a>
                         </div>
-                        </a>
                     </div>
-                </div>
-             `
+                `
+            }else{
+                projectList.innerHTML += `
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="work-item-container">
+                            <a href="project.html?p=${link}">
+                            <div class="work-item ">
+                                <div class="work-item-bg" style="background-image: url('${img_url}')"></div>
+                                <div class="work-item-title-container">
+                                <div class="work-item-title">
+                                    <span>${title}</span>
+                                </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                `
+            }
+
         });
     })
 }
