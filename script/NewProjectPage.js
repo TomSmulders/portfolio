@@ -51,10 +51,17 @@ window.onload = function() {
                 document.getElementById("textProject2").innerHTML = textProject[1];
 
                 document.getElementById("imgProject2").innerHTML = `<img src="${imgProject[1]}" alt="image" srcset="" class="center-image" style="height: 100%;">`
+                
+                if (imgProject[2]) {
+                    document.getElementById("imgProject3").innerHTML = `
+                        <img src="${imgProject[2]}" alt="image" srcset="" class="center-image" style=" width: 100%;">
+                    `
+                    
+                    document.getElementById("imgProject4").innerHTML = `
+                        <img src="${imgProject[3]}" alt="image" srcset="" class="center-image " style="width: 100%;">
+                    `;
+                }
 
-                document.getElementById("imgProject3").innerHTML = `<img src="${imgProject[2]}" alt="image" srcset="" class="center-image" style=" width: 100%;">`
-
-                document.getElementById("imgProject4").innerHTML = `<img src="${imgProject[3]}" alt="image" srcset="" class="center-image " style="width: 100%;">`;
 
                 //replease auto to embed to show on website
                 // like this: http://www.youtube.com/embed/GRonxog5mbw?autoplay=1&loop=1&playlist=GRonxog5mbw
