@@ -39,8 +39,12 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* width: 50%; */
+    
   }
+
+.main-page-image{
+  width: 50%;
+}
 
 .project-Page-image-size{
   width: 1500px;
@@ -256,3 +260,18 @@ body{
   overflow: hidden;
 }
 
+.lead a{
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.lead a:active{
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.project-Page-container{
+  width: 100%
+}

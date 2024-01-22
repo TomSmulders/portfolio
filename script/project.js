@@ -29,6 +29,7 @@ window.onload = function() {
             var textProject = data.text;
             var imgProject = data.img_project;
             var githubLink = data.github;
+            var itchIoLink = data.itch_io_link;
 
             if (tags_list) {
                 tags_list.forEach(tag => {
@@ -42,27 +43,25 @@ window.onload = function() {
            document.getElementById("textProject").innerHTML = textProject;
            
            //document.getElementById("imgProject1").style.backgroundImage = 'url("' + imgProject + '");';
+            if(imgProject){
+                document.getElementById("imgProject1").innerHTML = `
+                <img src="${imgProject} " alt="image project" srcset="" width="70%">
+                `
+            }
 
-           document.getElementById("imgProject1").innerHTML = `<img src="${imgProject} " alt="image project" srcset="" width="70%">`
-        if (githubLink) {
-            document.getElementById("github").innerHTML = `
-            <div align="center" class="socialbtns">
-                <ul>
-                    <li><a href="${githubLink}" class="fa fa-lg fa-github"></a></li>
-                </ul>
-            </div>
-            `;
-        }   
-        if (title == "Spaceship Acooro 69") {
-            document.getElementById("itch_io").innerHTML = `
-            <div align="center" class="socialbtns">
-                <ul>
-                <iframe frameborder="0" src="https://itch.io/embed/1959140" width="552" height="167"><a href="https://yaboiijesse.itch.io/spaceship-acorro69">Spaceship Acorro by Tom Smulders</a></iframe>
-                </ul>
-            </div>
-            `;
-        }
 
+
+            if (githubLink) {
+                document.getElementById("links").innerHTML += `
+                    <li><a href="${githubLink}" class="fa fa-github"></a></li>
+                `;
+            }
+
+            if (itchIoLink) {
+                document.getElementById("links").innerHTML += `
+                    <li><a href="${itchIoLink}" class="fab fa-itch-io"></a></li>
+                `;
+            }
     })
 
 }
