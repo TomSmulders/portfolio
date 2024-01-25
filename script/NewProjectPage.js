@@ -60,6 +60,8 @@ window.onload = function() {
                     document.getElementById("imgProject4").innerHTML = `
                         <img src="${imgProject[3]}" alt="image" srcset="" class="center-image " style="width: 100%;">
                     `;
+                }else{
+                    document.getElementById("2-images").remove();
                 }
 
 
