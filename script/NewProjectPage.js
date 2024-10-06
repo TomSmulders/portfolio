@@ -22,6 +22,7 @@ window.onload = function() {
         var project = document.getElementById("project");
 
             var data = doc.data();
+
             var layout = data.img_2_layout;
             var title = data.title;
             var imgUrl = data.img_url;

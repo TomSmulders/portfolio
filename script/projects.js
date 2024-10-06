@@ -15,7 +15,7 @@ window.onload = function() {
     var db = firebase.firestore();
 
     db.collection("projects").get().then(documents => {
-        var projectList = document.getElementById("projectList");
+        var projectList = document.getElementById("AllProjects");
         var internshipsList = document.getElementById("internshipList");
         documents.forEach(doc => {
             var data = doc.data();
@@ -24,62 +24,74 @@ window.onload = function() {
             var link = doc.id;
             var layout = data.img_2_layout;
             var internships = data.internship;
+            var show = data.doNotShow;
+            var goodProject = data.goodProject;
             
-            if (layout) {
+            if (!show) {
                 
-                projectList.innerHTML += `
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="work-item-container">
-                            <a href="NewProjectPage.html?p=${link}">
-                            <div class="work-item ">
-                                <div class="work-item-bg" style="background-image: url('${img_url}')"></div>
-                                <div class="work-item-title-container">
-                                <div class="work-item-title">
-                                    <span>${title}</span>
-                                </div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                `
+                if (goodProject) {
+                    projectList = document.getElementById("projectList");
+                }else{
+                    projectList = document.getElementById("AllProjects");
+                }
                 
-            }else if (internships) {
-                internshipsList.innerHTML += `
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="work-item-container">
-                            <a href="project.html?p=${link}">
-                            <div class="work-item ">
-                                <div class="work-item-bg" style="background-image: url('${img_url}')"></div>
-                                <div class="work-item-title-container">
-                                <div class="work-item-title">
-                                    <span>${title}</span>
+                if (layout) {
+                    
+                    projectList.innerHTML += `
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                            <div class="work-item-container">
+                                <a href="NewProjectPage.html?p=${link}">
+                                <div class="work-item ">
+                                    <div class="work-item-bg" style="background-image: url('${img_url}')"></div>
+                                    <div class="work-item-title-container">
+                                    <div class="work-item-title">
+                                        <span>${title}</span>
+                                    </div>
+                                    </div>
                                 </div>
-                                </div>
+                                </a>
                             </div>
-                            </a>
                         </div>
-                    </div>
-                `
-            }
-            else{
-                projectList.innerHTML += `
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="work-item-container">
-                            <a href="project.html?p=${link}">
-                            <div class="work-item ">
-                                <div class="work-item-bg" style="background-image: url('${img_url}')"></div>
-                                <div class="work-item-title-container">
-                                <div class="work-item-title">
-                                    <span>${title}</span>
+                    `
+                    
+                }else if (internships) {
+                    internshipsList.innerHTML += `
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                            <div class="work-item-container">
+                                <a href="project.html?p=${link}">
+                                <div class="work-item ">
+                                    <div class="work-item-bg" style="background-image: url('${img_url}')"></div>
+                                    <div class="work-item-title-container">
+                                    <div class="work-item-title">
+                                        <span>${title}</span>
+                                    </div>
+                                    </div>
                                 </div>
-                                </div>
+                                </a>
                             </div>
-                            </a>
                         </div>
-                    </div>
-                `
+                    `
+                }
+                else{
+                    projectList.innerHTML += `
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                            <div class="work-item-container">
+                                <a href="project.html?p=${link}">
+                                <div class="work-item ">
+                                    <div class="work-item-bg" style="background-image: url('${img_url}')"></div>
+                                    <div class="work-item-title-container">
+                                    <div class="work-item-title">
+                                        <span>${title}</span>
+                                    </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    `
+                }
             }
+
 
         });
     })
